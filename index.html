@@ -17,7 +17,9 @@
     <!--a container that inside contains a slider. -->
     <div id="app">
       <!-- a slider  that inside contains  images with dynamic interaction managed by vue -->
-       <div class="slider">
+       <div class="slider"
+       @mousenter="stopLoop"
+       @mouseleave="startloop">
           <!-- Font that has an event managed by vue -->
           <div class="prev" @click="prevImages">
             <!-- click event managed by vue which changes the current image with the previous one -->

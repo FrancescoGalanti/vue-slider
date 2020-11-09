@@ -18,8 +18,14 @@
             "./images/image3.jpg",
             "./images/image4.jpg"
          ],
+         intervalValid: 0,
        },
-              // Methods //
+      // callback function that manage an Existing function that create a loop wihin the images //
+       created(){
+
+         this.startloop();
+       },
+      // Methods //
        methods: {
          // callback function that manage  the image change with the next one //
          nextImages(){
@@ -41,10 +47,22 @@
         },
 
         // callback function that match the right arrayindex with the right font //
-        machtIndexImages(index){
+         machtIndexImages(index){
 
-          this.indexImg = index;
-        }
+           this.indexImg = index;
+         },
+         // call back function that create a images loop that appair every 3 seconds //
+         startloop(){
+           this. intervalValid = setInterval(() => {
+               // Existing function that switch the images with the next one //
+               this.nextImages();
+           }, 3000);
+
+         },
+         // callback function that stop that default loop //
+         stopLoop(){
+           clearInterval(this.intervalValid);
+         }
 
        }
 
