@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS SNACKS v5</title>
+    <!-- font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- Main css -->
     <link rel="stylesheet" href="style.css">
     <!-- vue -->
@@ -12,10 +14,34 @@
 <body>
 
 
-    <!-- container that has title and img with dinamic value -->
+    <!--a container that inside contains a slider. -->
     <div id="app">
-      <h1>{{ title }}</h1>
-      <img v-bind:src=imgURL v-bind:alt=title>
+      <!-- a slider  that inside contains  images with dynamic interaction managed by vue -->
+       <div class="slider">
+          <!-- Font that has an event managed by vue -->
+          <div class="prev">
+            <!-- click event managed by vue which changes the current image with the previous one -->
+            <i class="fas fa-arrow-left"></i>
+          </div>
+
+          <!-- An array of images handled by an event created in vue.  -->
+          <div class="images">
+            <img src="./images/image1.jpg" alt="">
+          </div>
+          <!-- Font that has an event managed by vue -->
+          <div class="next">
+               <!-- click event managed by vue  which changes the current image with the next one -->
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <!-- navigation bar that allows you to change the image based on its array's index -->
+          <div class="nav">
+            <!-- default font -->
+            <i class="fas fa-circle active"></i>
+            <i class="fas fa-circle "></i>
+            <i class="fas fa-circle "></i>
+            <i class="fas fa-circle "></i>
+          </div>
+       </div>
     </div>
 
 
