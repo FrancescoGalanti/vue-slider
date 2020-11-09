@@ -40,6 +40,12 @@
           }
         },
 
+        // callback function that match the right arrayindex with the right font //
+        machtIndexImages(index){
+
+          this.indexImg = index;
+        }
+
        }
 
 

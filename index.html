@@ -36,10 +36,14 @@
           <!-- navigation bar that allows you to change the image based on its array's index -->
           <div class="nav">
             <!-- default font -->
-            <i class="fas fa-circle active"></i>
+            <!-- <i class="fas fa-circle active"></i>
             <i class="fas fa-circle "></i>
             <i class="fas fa-circle "></i>
-            <i class="fas fa-circle "></i>
+            <i class="fas fa-circle "></i> -->
+            <!-- iterpolation with font in order to print the fonts in the dom that macthing the right image with the right array index  -->
+            <i v-for="(image,index) in images"
+            :class="['fas fa-circle', index == indexImg ? 'active' : '' ]"
+            @click="machtIndexImages(index)"></i>
           </div>
        </div>
     </div>
