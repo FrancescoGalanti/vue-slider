@@ -19,17 +19,17 @@
       <!-- a slider  that inside contains  images with dynamic interaction managed by vue -->
        <div class="slider">
           <!-- Font that has an event managed by vue -->
-          <div class="prev">
+          <div class="prev" @click="prevImages">
             <!-- click event managed by vue which changes the current image with the previous one -->
             <i class="fas fa-arrow-left"></i>
           </div>
 
           <!-- An array of images handled by an event created in vue.  -->
           <div class="images">
-            <img src="./images/image1.jpg" alt="">
+            <img :src="images[indexImg]" alt="">
           </div>
           <!-- Font that has an event managed by vue -->
-          <div class="next">
+          <div class="next" @click="nextImages">
                <!-- click event managed by vue  which changes the current image with the next one -->
             <i class="fas fa-arrow-right"></i>
           </div>
