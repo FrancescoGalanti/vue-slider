@@ -46,6 +46,8 @@
             <i class="fas fa-circle "></i>
             <i class="fas fa-circle "></i>
             <i class="fas fa-circle "></i> -->
+
+            
             <!-- iterpolation with font in order to print the fonts in the dom that macthing the right image with the right array index  -->
             <i v-for="(image,index) in images"
             :class="['fas fa-circle', index == indexImg ? 'active' : '' ]"
