@@ -1,1 +1,1 @@
-vue-slider
+js-pwdgen-wannabe
