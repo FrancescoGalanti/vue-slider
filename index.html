@@ -18,8 +18,12 @@
     <div id="app">
       <!-- a slider  that inside contains  images with dynamic interaction managed by vue -->
        <div class="slider"
-       @mousenter="stopLoop"
-       @mouseleave="startloop">
+       @mouseenter="stopLoop"
+       @mouseleave="startloop"
+       @keyup.arrow-left="prevImages"
+       @keyup.arrow-right="nextImages"
+       tabindex="0">
+
           <!-- Font that has an event managed by vue -->
           <div class="prev" @click="prevImages">
             <!-- click event managed by vue which changes the current image with the previous one -->

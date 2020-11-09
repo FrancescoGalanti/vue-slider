@@ -62,7 +62,7 @@
          // callback function that stop that default loop //
          stopLoop(){
            clearInterval(this.intervalValid);
-         }
+         },
 
        }
 
